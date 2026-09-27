@@ -11,8 +11,8 @@ one cold with `/sdlc`; capture a raw idea with `/intent`.
 
 ### Issue tracker
 
-Issues, specs, and tickets live as GitHub issues in `Slalom/ae-library`, via the
-`gh` CLI. See `docs/agents/issue-tracker.md`.
+Issues, specs, and tickets live as GitHub issues in this repo, via the `gh`
+CLI. See `docs/agents/issue-tracker.md`.
 
 ### Triage labels
 
