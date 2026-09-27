@@ -1,5 +1,9 @@
 # Template
 
+## Writing style
+
+Do not hard-wrap prose. Write each paragraph, list item, or comment as one line and let the editor soft-wrap it. Only break lines where the break carries meaning: between paragraphs and list items, in code, or where a format requires it (e.g. git commit bodies at 72 columns).
+
 ## The SDLC
 
 Features move `intent → spec → tickets → code+tests → review`, carried as GitHub
@@ -11,8 +15,7 @@ one cold with `/sdlc`; capture a raw idea with `/intent`.
 
 ### Issue tracker
 
-Issues, specs, and tickets live as GitHub issues in this repo, via the `gh`
-CLI. See `docs/agents/issue-tracker.md`.
+Issues, specs, and tickets live as GitHub issues in this repo, via the `gh` CLI. See `docs/agents/issue-tracker.md`.
 
 ### Triage labels
 
