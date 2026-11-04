@@ -24,5 +24,5 @@ See `docs/agents/triage-labels.md`.
 
 ### Domain docs
 
-Single-context: `CONTEXT.md` and `docs/adr/` at the repo root, created lazily by
+Single-context: `GLOSSARY.md` and `docs/adr/` at the repo root, created lazily by
 `/domain-modeling`. See `docs/agents/domain.md`.

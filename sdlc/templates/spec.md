@@ -1,7 +1,7 @@
 # Spec: <title>  (from intent)
 
 Requirements + design in one pass. Produced from the intent above, constrained
-by the repo's skills (`domain-modeling`, `codebase-design`) and `CONTEXT.md`
+by the repo's skills (`domain-modeling`, `codebase-design`) and `GLOSSARY.md`
 vocabulary. See the `to-spec` skill for the fuller shape.
 
 ## Summary
@@ -12,7 +12,7 @@ vocabulary. See the `to-spec` skill for the fuller shape.
 
 ## Design
 <How it fits what already exists: files and folders touched, which AI tools it
-targets, key interfaces. Use CONTEXT.md terms. Reference existing work, do not
+targets, key interfaces. Use GLOSSARY.md terms. Reference existing work, do not
 restate it.>
 
 ## Flagged concerns
