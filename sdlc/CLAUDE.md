@@ -66,3 +66,8 @@ into an `intent` issue; the record starts there, not in `ideas.md`.
 
 `sdlc/templates/` holds the issue-body shapes each stage writes: `intent.md`,
 `spec.md`, `plan.md`, `review.md`. `/intent` fills `intent.md`.
+
+## Common tools
+
+`sdlc/common-tools.md` lists project-agnostic tools (install commands, basic
+usage) that aren't skills. Check it before recommending a tool.
