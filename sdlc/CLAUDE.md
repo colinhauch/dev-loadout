@@ -46,12 +46,15 @@ live skill.
 - `sdlc/skills/sdlc/` → `sdlc` — navigates the issue lifecycle (resume cold).
 - `sdlc/skills/intent/` → `intent` — Stage 1 front door: `/intent` interviews a
   raw idea and opens an `intent` issue at `needs-triage`.
+- `sdlc/skills/commit/` → `commit` — conventional-commit helper.
 - `sdlc/skills/setup-sdlc/` → `setup-sdlc` — one-time setup for a repo made from
   this template: picks agents and tracker, prunes unused tooling, hands tracker
   config to `/setup-matt-pocock-skills`.
 
 The rest of `.claude/skills/` comes from [skills.sh](https://skills.sh), pinned in
-`skills-lock.json` at the repo root.
+`skills-lock.json` at the repo root and installed as real copies
+(`npx skills add <source> -a claude-code --copy -s <skills>`), so there is no
+`.agents/` store. `/setup-sdlc` handles installing for the agents a project uses.
 
 ## Ideas inbox (pre-intent)
 

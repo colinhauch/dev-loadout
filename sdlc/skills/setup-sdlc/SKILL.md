@@ -16,12 +16,24 @@ This skill owns only what is specific to this SDLC (`sdlc/README.md`). Tracker, 
 
 Read, don't assume: `git remote -v`, `docs/agents/`, `CLAUDE.md`, `README.md`, `LICENSE`, `skills-lock.json`, `.agents/skills/`, `.claude/skills/`, and `GLOSSARY.md`. Note what is still template placeholder versus already customised, so a re-run never clobbers real edits.
 
-### 2. Agents in use
+### 2. Agents and skills
 
-Ask which coding agents this project uses: Claude Code only (recommended), or also Codex, Gemini CLI, Copilot, etc.
+Custom skills live in `sdlc/skills/<name>/` (the source of truth, symlinked into `.claude/skills/`). Upstream skills come from skills.sh and are listed in `skills-lock.json`; they are installed as **real copies** so each agent gets plain files, with no `.agents/` store or symlinks.
 
-- **Claude Code only:** delete every `agents/` folder that contains only `openai.yaml`, under both `.agents/skills/` and `.claude/skills/`. Claude Code never reads them. Tell the user a later `npx skills update` may restore them, and this step can be re-run.
-- **Others too:** keep them. `.agents/skills/` is the real source and `.claude/skills/` holds symlinks (Claude Code only reads `.claude/skills/`).
+Ask which coding agents this project uses: Claude Code only (recommended), or also Codex, Gemini CLI, Copilot, etc. Then ask whether to keep every upstream skill in `skills-lock.json` (default) or a trimmed list; remove the unwanted entries from the lockfile and `.claude/skills/`.
+
+Install the upstream skills for the chosen agents (zsh-safe; pass the names as separate arguments):
+
+```
+npx skills add mattpocock/skills -a <agent> --copy -s <skill> <skill> ... -y
+```
+
+- Claude Code: `-a claude-code` writes `.claude/skills/<name>/`.
+- Codex and other agents: add them to `-a` (or re-run later with `-a codex`); they read `.agents/skills/`, so that directory appears only when such an agent is chosen.
+- Do not use `npx skills experimental_install`: it always restores into `.agents/skills/` and ignores `--copy` and `-a`.
+- `npx skills update -p -y` updates copies in place afterwards.
+
+Claude Code never reads `agents/openai.yaml`. Unless Codex was chosen, delete every `agents/` folder that contains only `openai.yaml` under `.claude/skills/` (and `.agents/skills/` if present). Installs and updates restore them, so re-run this step after either.
 
 ### 3. Issue tracker, labels, domain docs
 
