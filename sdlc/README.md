@@ -67,7 +67,7 @@ stage 3.
 
 ### 3. Spec → a new linked `spec` issue
 A working session takes one cleared intent, grills it (`/grill-me`,
-`/grill-with-docs`, constrained by `CONTEXT.md` and the `domain-modeling` /
+`/grill-with-docs`, constrained by `GLOSSARY.md` and the `domain-modeling` /
 `codebase-design` skills), then `/to-spec` publishes a **new** issue labeled
 `spec` and `ready-for-agent`, carrying `Intent: #<n>` in its body. Close the
 intent. The link is the drift guard: a reviewer checking whether the spec still
@@ -105,7 +105,7 @@ One pass covering bugs plus spec compliance (the `code-review` skill runs these)
 - **Security** — injection, auth gaps, secrets in code or docs, and any client
   information (see `README.md`).
 - **Spec compliance** — does the diff do what the spec issue required?
-- **Standards** — repo conventions (`CLAUDE.md`, `CONTEXT.md`).
+- **Standards** — repo conventions (`CLAUDE.md`, `GLOSSARY.md`).
 
 **Important vs Nit:** reserve *Important* for anything that breaks behavior, leaks
 data, or breaks a policy. Style and naming are nits — cap at five per review,
